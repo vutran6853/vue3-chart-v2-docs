@@ -14,4 +14,4 @@ npm install
 npm run dev
 ```
 
-You can [open an issue](https://github.com/vue3-chart-v2/vue3-chart-v2-docs/issues/new) for bugs or feature requests.
+You can [open an issue](https://github.com/vutran6853/vue3-chart-v2-docs/issues/new) for bugs or feature requests.

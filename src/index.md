@@ -13,11 +13,9 @@ actionLink: /guide/
 <!-- This doc is under WIP. You can [open an issue](https://github.com/superbvue/superbvue-docs/issues/new) for bugs or feature requests. -->
 
 ## Features
-
-- [Components](/guide/components.html)
 - TypeScript support of Vue 3
-- Bootstrap v5 support of Vue 3
-- No jQuery dependencies
+- template support
+- JSX support
 
 ## Roadmap
 
