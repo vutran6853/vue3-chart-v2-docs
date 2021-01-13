@@ -1,0 +1,19 @@
+{
+  "name": "vue3-chart-v2-docs",
+  "version": "0.0.1",
+  "description": " Easy and beautiful charts with Chart.js and Vue 3",
+  "main": "index.js",
+  "authors": {
+    "name": "Vu Tran",
+    "email": "linpinlinpin4@yahoo.com"
+  },
+  "repository": "https://github.com/vutran6853/vue3-chart-v2-docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
