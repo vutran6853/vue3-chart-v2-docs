@@ -292,5 +292,155 @@ export default defineComponent({
 :::
 
 
+## Chart with dynamic data
+
+::: details template
+// LineChart.js
+```js
+import { defineComponent } from 'vue'
+import { Line } from 'vue3-chart-v2'
+
+export default defineComponent({
+  extends: Line,
+  props: {
+    chartData: {
+      type: Object,
+      required: true
+    },
+    chartOptions: {
+      type: Object,
+      required: false
+    },
+  },
+  mounted () {
+    this.renderChart(this.chartData, this.chartOptions)
+  }
+})
+```
+// import your LineChart.js
+```vue
+<template>
+  <LineChart v-bind:chartData="state.chartDatav" />
+  <button v-on:click="fillData">Randomize</button>
+</template>
+
+<script>
+import { defineComponent } from 'vue'
+import LineChart from './path/to/LineChart.js'
+
+export default defineComponent({
+  name: 'App',
+  data () {
+    return {
+      state: {
+        chartData: {},
+      }
+    }
+  },
+  beforeMount () {
+    this.fillData()
+  },
+  methods: {
+    fillData () {
+      this.state.chartData = {
+        labels: [this.getRandomInt(), this.getRandomInt()],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [this.getRandomInt(), this.getRandomInt()]
+          }, 
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [this.getRandomInt(), this.getRandomInt()]
+          }
+        ]
+      }
+    },
+    getRandomInt () {
+      return Math.floor(Math.random() * (10 - 5 + 1)) + 10
+    }
+  },
+})
+</script>
+```
+
+:::
+
+::: details jsx
+// LineChart.js
+```js
+import { defineComponent } from 'vue'
+import { Line } from 'vue3-chart-v2'
+
+export default defineComponent({
+  extends: Line,
+  props: {
+    chartData: {
+      type: Object,
+      required: true
+    },
+    chartOptions: {
+      type: Object,
+      required: false
+    },
+  },
+  mounted () {
+    this.renderChart(this.chartData, this.chartOptions)
+  }
+})
+```
+// import your LineChart.js
+```js
+import { defineComponent } from 'vue'
+import LineChart from './path/to/LineChart.js'
+
+export default defineComponent({
+  name: 'App',
+  extends: Line,
+  data () {
+    return {
+      state: {
+        chartData: {},
+      }
+    }
+  },
+  beforeMount () {
+    this.handleFillData()
+  },
+  methods: {
+    handleFillData () {
+      this.state.chartData = {
+        labels: [this.handleGetRandomInt(), this.handleGetRandomInt()],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [this.handleGetRandomInt(), this.handleGetRandomInt()]
+          }, 
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [this.handleGetRandomInt(), this.handleGetRandomInt()]
+          }
+        ]
+      }
+    },
+    handleGetRandomInt () {
+      return Math.floor(Math.random() * (10 - 5 + 1)) + 10
+    }
+  },
+  render() {
+    return (
+      <Fragment>
+        <Chart chartData={this.state.chartData} />
+        <button onClick={this.fillData}>Randomize</button>
+      </Fragment>
+    )
+  }
+})
+```
+:::
 
 ##
