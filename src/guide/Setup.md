@@ -1,9 +1,9 @@
 # Installation
 
-``` js
-npm install vue3-chart-v2 --save
+```sh
+npm install vue3-chart-v2 chart.js --save
 // or
-yarn add --dev vue3-chart-v2 
+yarn add vue3-chart-v2 chart.js
 ```
 
 ##
