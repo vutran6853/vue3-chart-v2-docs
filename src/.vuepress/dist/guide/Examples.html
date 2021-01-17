@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
-    <link rel="preload" href="/assets/css/0.styles.e7541938.css" as="style"><link rel="preload" href="/assets/js/app.bc3f47b5.js" as="script"><link rel="preload" href="/assets/js/2.170ba680.js" as="script"><link rel="preload" href="/assets/js/12.9c03be12.js" as="script"><link rel="prefetch" href="/assets/js/10.01173106.js"><link rel="prefetch" href="/assets/js/11.c97f3915.js"><link rel="prefetch" href="/assets/js/13.2c6e0e4b.js"><link rel="prefetch" href="/assets/js/14.73fb21cd.js"><link rel="prefetch" href="/assets/js/15.3cd89956.js"><link rel="prefetch" href="/assets/js/3.47ee545a.js"><link rel="prefetch" href="/assets/js/4.2478bbb5.js"><link rel="prefetch" href="/assets/js/5.16230233.js"><link rel="prefetch" href="/assets/js/6.e3f7c3cd.js"><link rel="prefetch" href="/assets/js/7.abdf33cb.js"><link rel="prefetch" href="/assets/js/8.5344e461.js"><link rel="prefetch" href="/assets/js/9.370a7381.js">
+    <link rel="preload" href="/assets/css/0.styles.e7541938.css" as="style"><link rel="preload" href="/assets/js/app.d4341c16.js" as="script"><link rel="preload" href="/assets/js/2.170ba680.js" as="script"><link rel="preload" href="/assets/js/12.1766aee6.js" as="script"><link rel="prefetch" href="/assets/js/10.01173106.js"><link rel="prefetch" href="/assets/js/11.34470e20.js"><link rel="prefetch" href="/assets/js/13.e3614154.js"><link rel="prefetch" href="/assets/js/14.949cb63b.js"><link rel="prefetch" href="/assets/js/15.e966d4a9.js"><link rel="prefetch" href="/assets/js/3.47ee545a.js"><link rel="prefetch" href="/assets/js/4.2478bbb5.js"><link rel="prefetch" href="/assets/js/5.16230233.js"><link rel="prefetch" href="/assets/js/6.e3f7c3cd.js"><link rel="prefetch" href="/assets/js/7.abdf33cb.js"><link rel="prefetch" href="/assets/js/8.5344e461.js"><link rel="prefetch" href="/assets/js/9.370a7381.js">
     <link rel="stylesheet" href="/assets/css/0.styles.e7541938.css">
   </head>
   <body>
@@ -24,11 +24,11 @@
 </a></div> <a href="https://github.com/vutran6853/vue3-chart-v2-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
     GitHub
     <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">Introduction</a></li><li><a href="/guide/Setup.html" class="sidebar-link">Installation</a></li><li><a href="/guide/Creating your first Chart.html" class="sidebar-link">Creating your first Chart</a></li><li><a href="/guide/Examples.html" aria-current="page" class="active sidebar-link">Examples</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/Examples.html#chart-with-props" class="sidebar-link">Chart with props</a></li><li class="sidebar-sub-header"><a href="/guide/Examples.html#chart-with-local-data" class="sidebar-link">Chart with local data</a></li><li class="sidebar-sub-header"><a href="/guide/Examples.html#chart-with-api-data" class="sidebar-link">Chart with API data</a></li><li class="sidebar-sub-header"><a href="/guide/Examples.html#chart-with-dynamic-data" class="sidebar-link">Chart with dynamic data</a></li><li class="sidebar-sub-header"><a href="/guide/Examples.html#" class="sidebar-link"></a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="examples"><a href="#examples" class="header-anchor">#</a> Examples</h1> <h2 id="chart-with-props"><a href="#chart-with-props" class="header-anchor">#</a> Chart with props</h2> <details class="custom-block details"><summary>template</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Bar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Pie <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   name<span class="token operator">:</span> <span class="token string">'MonthlyChart'</span><span class="token punctuation">,</span>
-  <span class="token keyword">extends</span><span class="token operator">:</span> Bar<span class="token punctuation">,</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> Pie<span class="token punctuation">,</span>
   props<span class="token operator">:</span> <span class="token punctuation">{</span>
     chartData<span class="token operator">:</span> <span class="token punctuation">{</span>
       type<span class="token operator">:</span> Object<span class="token punctuation">,</span>
@@ -43,11 +43,37 @@
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderChart</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>chartData<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>chartOptions<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
 </code></pre></div><p>After that you can add your chart component to a parent component</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MonthlyChart</span> <span class="token attr-name"><span class="token namespace">v-bind:</span>chartData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>chartData<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">v-bind:</span>chartOptions</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>chartOptions<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MonthlyChart</span> <span class="token attr-name"><span class="token namespace">v-bind:</span>chartData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>state.chartData<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">v-bind:</span>chartOptions</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>state.chartOptions<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div></details> <details class="custom-block details"><summary>jsx</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'App'</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        chartData<span class="token operator">:</span> <span class="token punctuation">{</span>
+          datasets<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              backgroundColor<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Red'</span><span class="token punctuation">,</span> <span class="token string">'Yellow'</span><span class="token punctuation">,</span> <span class="token string">'Blue'</span><span class="token punctuation">,</span> <span class="token string">'Green'</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token comment">// These labels appear in the legend and in the tooltips when hovering different arcs</span>
+          labels<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Red'</span><span class="token punctuation">,</span> <span class="token string">'Yellow'</span><span class="token punctuation">,</span> <span class="token string">'Blue'</span><span class="token punctuation">,</span> <span class="token string">'Green'</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        chartOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+          responsive<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><em>Output</em> <iframe src="https://codesandbox.io/embed/chart-with-props-vhg4r?fontsize=14&amp;hidenavigation=1&amp;theme=dark" title="Chart with props" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" style="width:100%;height:500px;border:0;border-radius:4px;overflow:hidden;"></iframe></p></details> <details class="custom-block details"><summary>jsx</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Bar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -68,20 +94,6 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div><p>After that you can add your chart component to a parent component</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Fragment</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
-        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">MonthlyChart</span></span> <span class="token attr-name">chartData</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>chartData<span class="token punctuation">}</span></span> <span class="token attr-name">chartOptions</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>chartOptions<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
-      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Fragment</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre></div></details> <h2 id="chart-with-local-data"><a href="#chart-with-local-data" class="header-anchor">#</a> Chart with local data</h2> <details class="custom-block details"><summary>template</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Bar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  name<span class="token operator">:</span> <span class="token string">'MonthlyChart'</span><span class="token punctuation">,</span>
-  <span class="token keyword">extends</span><span class="token operator">:</span> Bar<span class="token punctuation">,</span>
   <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
       state<span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -101,41 +113,109 @@
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderChart</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartdata<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>options<span class="token punctuation">)</span>
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Fragment</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">MonthlyChart</span></span> <span class="token attr-name">chartData</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartData<span class="token punctuation">}</span></span> <span class="token attr-name">chartOptions</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartOptions<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Fragment</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
-</code></pre></div></details> <details class="custom-block details"><summary>jsx</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Bar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
+</code></pre></div><p><em>Output</em></p> <iframe src="https://codesandbox.io/embed/bold-kare-dkkgo?fontsize=14&amp;hidenavigation=1&amp;module=%2Fsrc%2FApp.js&amp;theme=dark" title="Chart with props-jsx" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" style="width:100%;height:500px;border:0;border-radius:4px;overflow:hidden;"></iframe></details> <h2 id="chart-with-local-data"><a href="#chart-with-local-data" class="header-anchor">#</a> Chart with local data</h2> <details class="custom-block details"><summary>template</summary> <p><em>SportChart.vue</em></p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Radar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  name<span class="token operator">:</span> <span class="token string">'MonthlyChart'</span><span class="token punctuation">,</span>
-  <span class="token keyword">extends</span><span class="token operator">:</span> Bar<span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'SportChart'</span><span class="token punctuation">,</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> Radar<span class="token punctuation">,</span>
   <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
       state<span class="token operator">:</span> <span class="token punctuation">{</span>
         chartData<span class="token operator">:</span> <span class="token punctuation">{</span>
-          datasets<span class="token operator">:</span> <span class="token punctuation">[</span>
-            <span class="token punctuation">{</span>
-              data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-              backgroundColor<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Red'</span><span class="token punctuation">,</span> <span class="token string">'Yellow'</span><span class="token punctuation">,</span> <span class="token string">'Blue'</span><span class="token punctuation">,</span> <span class="token string">'Green'</span><span class="token punctuation">]</span>
-            <span class="token punctuation">}</span>
-          <span class="token punctuation">]</span><span class="token punctuation">,</span>
-          <span class="token comment">// These labels appear in the legend and in the tooltips when hovering different arcs</span>
-          labels<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Red'</span><span class="token punctuation">,</span> <span class="token string">'Yellow'</span><span class="token punctuation">,</span> <span class="token string">'Blue'</span><span class="token punctuation">,</span> <span class="token string">'Green'</span><span class="token punctuation">]</span>
+           labels<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Running'</span><span class="token punctuation">,</span> <span class="token string">'Swimming'</span><span class="token punctuation">,</span> <span class="token string">'Eating'</span><span class="token punctuation">,</span> <span class="token string">'Cycling'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            datasets<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                label<span class="token operator">:</span> <span class="token string">'Human 1'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                label<span class="token operator">:</span> <span class="token string">'Human 2'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
         chartOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
           responsive<span class="token operator">:</span> <span class="token boolean">false</span>
         <span class="token punctuation">}</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderChart</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartdata<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>options<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderChart</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartData<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartOptions<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre></div></details> <h2 id="chart-with-api-data"><a href="#chart-with-api-data" class="header-anchor">#</a> Chart with API data</h2> <details class="custom-block details"><summary>template</summary> <p>A common pattern is to use an API to retrieve your data. However, there are some things to keep in mind. The most common problem is that you mount your chart component directly and pass in data from an asyncronous API call. The problem with this approach is that Chart.js tries to render your chart and access the chart data syncronously, so your chart mounts before the API data arrives.</p> <p>To prevent this, a simple <code>v-if</code> is the best solution.</p> <p>Create your chart component with a data prop and options prop, so we can pass in our data and options from a container component.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>After that you can render your chart component anywhere</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SportChart</span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> SportChart <span class="token keyword">from</span> <span class="token string">'./path/to/SportChart'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'App'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    SportChart
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><em>Output</em></p> <iframe src="https://codesandbox.io/embed/chart-with-local-data-6xcx7?fontsize=14&amp;hidenavigation=1&amp;module=%2Fsrc%2FApp.vue&amp;theme=dark" title="Chart with local data" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" style="width:100%;height:500px;border:0;border-radius:4px;overflow:hidden;"></iframe></details> <details class="custom-block details"><summary>jsx</summary> <p><em>SportChart.js</em></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Radar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'SportChart'</span><span class="token punctuation">,</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> Radar<span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        chartData<span class="token operator">:</span> <span class="token punctuation">{</span>
+           labels<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Running'</span><span class="token punctuation">,</span> <span class="token string">'Swimming'</span><span class="token punctuation">,</span> <span class="token string">'Eating'</span><span class="token punctuation">,</span> <span class="token string">'Cycling'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            datasets<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                label<span class="token operator">:</span> <span class="token string">'Human 1'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                label<span class="token operator">:</span> <span class="token string">'Human 2'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        chartOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+          responsive<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderChart</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartData<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>chartOptions<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>After that you can render your chart component anywhere</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent<span class="token punctuation">,</span> Fragment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> SportChart <span class="token keyword">from</span> <span class="token string">'./path/to/SportChart'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'App'</span><span class="token punctuation">,</span>
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Fragment<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>SportChart <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Fragment<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><em>Output</em></p> <iframe src="https://codesandbox.io/embed/cocky-mirzakhani-34zul?fontsize=14&amp;hidenavigation=1&amp;module=%2Fsrc%2FApp.js&amp;theme=dark" title="Chart with local data-jsx" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" style="width:100%;height:500px;border:0;border-radius:4px;overflow:hidden;"></iframe></details> <h2 id="chart-with-api-data"><a href="#chart-with-api-data" class="header-anchor">#</a> Chart with API data</h2> <details class="custom-block details"><summary>template</summary> <p>A common pattern is to use an API to retrieve your data. However, there are some things to keep in mind. The most common problem is that you mount your chart component directly and pass in data from an asyncronous API call. The problem with this approach is that Chart.js tries to render your chart and access the chart data syncronously, so your chart mounts before the API data arrives.</p> <p>To prevent this, a simple <code>v-if</code> is the best solution.</p> <p>Create your chart component with a data prop and options prop, so we can pass in our data and options from a container component.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> defineComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Line <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue3-chart-v2'</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -384,6 +464,6 @@
       <a href="/guide/Creating your first Chart.html" class="prev">
         Creating your first Chart
       </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.bc3f47b5.js" defer></script><script src="/assets/js/2.170ba680.js" defer></script><script src="/assets/js/12.9c03be12.js" defer></script>
+    <script src="/assets/js/app.d4341c16.js" defer></script><script src="/assets/js/2.170ba680.js" defer></script><script src="/assets/js/12.1766aee6.js" defer></script>
   </body>
 </html>

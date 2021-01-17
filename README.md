@@ -1,6 +1,5 @@
 # vue3-chart-v2-docs
-vue3-chart-v2 docs for [vue3-chart-v2](https://github.com/vue3-chart-v2/vue3-chart-v2).
-
+vue3-chart-v2 docs for [vue3-chart-v2](https://github.com//vutran6853/vue3-chart-v2)
 ## Development
 
 

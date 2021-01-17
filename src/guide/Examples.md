@@ -3,13 +3,14 @@
 ## Chart with props
 
 ::: details template
+
 ```js
 import { defineComponent } from 'vue'
-import { Bar } from 'vue3-chart-v2'
+import { Pie } from 'vue3-chart-v2'
 
 export default defineComponent({
   name: 'MonthlyChart',
-  extends: Bar,
+  extends: Pie,
   props: {
     chartData: {
       type: Object,
@@ -24,14 +25,48 @@ export default defineComponent({
     this.renderChart(this.chartData, this.chartOptions)
   }
 })
-</script>
 ```
 After that you can add your chart component to a parent component
 ```vue
 <template>
-  <MonthlyChart v-bind:chartData="chartData" v-bind:chartOptions="chartOptions" />
+  <MonthlyChart v-bind:chartData="state.chartData" v-bind:chartOptions="state.chartOptions" />
 </template>
+
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'App',
+  data () {
+    return {
+      state: {
+        chartData: {
+          datasets: [
+            {
+              data: [1, 2, 3, 4],
+              backgroundColor: ['Red', 'Yellow', 'Blue', 'Green']
+            }
+          ],
+          // These labels appear in the legend and in the tooltips when hovering different arcs
+          labels: ['Red', 'Yellow', 'Blue', 'Green']
+        },
+        chartOptions: {
+          responsive: false
+        }
+      }
+    }
+  }
+})
+</script>
 ```
+
+*Output*
+<iframe src="https://codesandbox.io/embed/chart-with-props-vhg4r?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="Chart with props"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts">
+</iframe>
 
 :::
 
@@ -61,27 +96,6 @@ export default defineComponent({
 After that you can add your chart component to a parent component
 ```jsx
 export default defineComponent({
-  render () {
-    return (
-      <Fragment>
-        <MonthlyChart chartData={chartData} chartOptions={chartOptions} />
-      </Fragment>
-    )
-  }
-})
-```
-:::
-
-## Chart with local data
-
-::: details template
-```js
-import { defineComponent } from 'vue'
-import { Bar } from 'vue3-chart-v2'
-
-export default defineComponent({
-  name: 'MonthlyChart',
-  extends: Bar,
   data () {
     return {
       state: {
@@ -101,47 +115,162 @@ export default defineComponent({
       }
     }
   },
-  mounted () {
-    this.renderChart(this.state.chartdata, this.state.options)
+  render () {
+    return (
+      <Fragment>
+        <MonthlyChart chartData={this.state.chartData} chartOptions={this.state.chartOptions} />
+      </Fragment>
+    )
   }
 })
-</script>
 ```
 
+*Output*
+
+<iframe src="https://codesandbox.io/embed/bold-kare-dkkgo?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.js&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="Chart with props-jsx"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 :::
 
-::: details jsx
-```js
+## Chart with local data
+
+::: details template
+
+*SportChart.vue*
+```vue
+<script>
 import { defineComponent } from 'vue'
-import { Bar } from 'vue3-chart-v2'
+import { Radar } from 'vue3-chart-v2'
 
 export default defineComponent({
-  name: 'MonthlyChart',
-  extends: Bar,
+  name: 'SportChart',
+  extends: Radar,
   data () {
     return {
       state: {
         chartData: {
-          datasets: [
-            {
-              data: [1, 2, 3, 4],
-              backgroundColor: ['Red', 'Yellow', 'Blue', 'Green']
-            }
-          ],
-          // These labels appear in the legend and in the tooltips when hovering different arcs
-          labels: ['Red', 'Yellow', 'Blue', 'Green']
+           labels: ['Running', 'Swimming', 'Eating', 'Cycling'],
+            datasets: [
+              {
+                label: 'Human 1',
+                data: [20, 10, 4, 2]
+              },
+              {
+                label: 'Human 2',
+                data: [10, 20, 2, 4]
+              }
+            ]
         },
         chartOptions: {
           responsive: false
         }
       }
     }
-  }
+  },
   mounted () {
-    this.renderChart(this.state.chartdata, this.state.options)
+    this.renderChart(this.state.chartData, this.state.chartOptions)
+  }
+})
+</script>
+```
+After that you can render your chart component anywhere
+```vue
+<template>
+  <SportChart />
+</template>
+
+<script>
+import { defineComponent } from 'vue'
+import SportChart from './path/to/SportChart'
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    SportChart
+  }
+})
+</script>
+```
+*Output*
+
+<iframe src="https://codesandbox.io/embed/chart-with-local-data-6xcx7?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.vue&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="Chart with local data"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+:::
+
+::: details jsx
+
+*SportChart.js*
+
+```js
+import { defineComponent } from 'vue'
+import { Radar } from 'vue3-chart-v2'
+
+export default defineComponent({
+  name: 'SportChart',
+  extends: Radar,
+  data () {
+    return {
+      state: {
+        chartData: {
+           labels: ['Running', 'Swimming', 'Eating', 'Cycling'],
+            datasets: [
+              {
+                label: 'Human 1',
+                data: [20, 10, 4, 2]
+              },
+              {
+                label: 'Human 2',
+                data: [10, 20, 2, 4]
+              }
+            ]
+        },
+        chartOptions: {
+          responsive: false
+        }
+      }
+    }
+  },
+  mounted () {
+    this.renderChart(this.state.chartData, this.state.chartOptions)
   }
 })
 ```
+
+After that you can render your chart component anywhere
+
+```js
+import { defineComponent, Fragment } from 'vue'
+import SportChart from './path/to/SportChart'
+
+export default defineComponent({
+  name: 'App',
+  render () {
+    return (
+      <Fragment>
+        <SportChart />
+      </Fragment>
+    )
+  }
+})
+```
+
+*Output*
+
+<iframe src="https://codesandbox.io/embed/cocky-mirzakhani-34zul?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.js&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="Chart with local data-jsx"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
 :::
 
 ## Chart with API data
