@@ -439,7 +439,7 @@ export default defineComponent({
     chartOptions: {
       type: Object,
       required: false
-    },
+    }
   },
   mounted () {
     this.renderChart(this.chartData, this.chartOptions)
@@ -449,7 +449,7 @@ export default defineComponent({
 // import your LineChart.js
 ```vue
 <template>
-  <LineChart v-bind:chartData="state.chartDatav" />
+  <LineChart v-bind:chartData="state.chartData" />
   <button v-on:click="fillData">Randomize</button>
 </template>
 
@@ -463,6 +463,9 @@ export default defineComponent({
     return {
       state: {
         chartData: {},
+        chartOptions: {
+          responsive: true
+        }
       }
     }
   },
@@ -472,13 +475,8 @@ export default defineComponent({
   methods: {
     fillData () {
       this.state.chartData = {
-        labels: [this.getRandomInt(), this.getRandomInt()],
+        labels: ['Label 1', 'Label 2'],
         datasets: [
-          {
-            label: 'Data One',
-            backgroundColor: '#f87979',
-            data: [this.getRandomInt(), this.getRandomInt()]
-          }, 
           {
             label: 'Data One',
             backgroundColor: '#f87979',
@@ -494,6 +492,14 @@ export default defineComponent({
 })
 </script>
 ```
+*Output*
+
+<iframe src="https://codesandbox.io/embed/elated-violet-d7kuk?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.vue&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="Chart with dynamic data"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
 :::
 
@@ -513,7 +519,7 @@ export default defineComponent({
     chartOptions: {
       type: Object,
       required: false
-    },
+    }
   },
   mounted () {
     this.renderChart(this.chartData, this.chartOptions)
@@ -531,7 +537,7 @@ export default defineComponent({
   data () {
     return {
       state: {
-        chartData: {},
+        chartData: {}
       }
     }
   },
@@ -541,13 +547,8 @@ export default defineComponent({
   methods: {
     handleFillData () {
       this.state.chartData = {
-        labels: [this.handleGetRandomInt(), this.handleGetRandomInt()],
+        labels: ['Label 1', 'Label 2'],
         datasets: [
-          {
-            label: 'Data One',
-            backgroundColor: '#f87979',
-            data: [this.handleGetRandomInt(), this.handleGetRandomInt()]
-          }, 
           {
             label: 'Data One',
             backgroundColor: '#f87979',
@@ -563,13 +564,23 @@ export default defineComponent({
   render() {
     return (
       <Fragment>
-        <Chart chartData={this.state.chartData} />
+        <Chart chartData={this.state.chartData} chartOptions={this.state.chartOptions} />
         <button onClick={this.fillData}>Randomize</button>
       </Fragment>
     )
   }
 })
 ```
+
+*Output*
+
+<iframe src="https://codesandbox.io/embed/wispy-hill-9g8j7?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.js&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="Chart with dynamic data-jsx"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
 :::
 
 ##
